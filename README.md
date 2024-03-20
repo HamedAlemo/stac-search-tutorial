@@ -24,6 +24,7 @@ $ docker run -it -p 8888:8888 hamedalemo/stac-search-tutorial
 
 ### Build your own Docker image (optional)
 
+- Windows users: It is highly recommended that you pull the Docker image, there seems to be an issue with conda-forge
 - Clone the repository to your local machine
 - Change directory to the repository's directory on your machine
 - Build the Docker image using the following command:
