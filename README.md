@@ -6,7 +6,7 @@ This is part of the course on [Advanced Geospatial Analytics with Python](https:
 
 ## Requirements
 
-You need to have Docker installed on your machine. 
+You need to have [Pixi](https://pixi.sh/latest/#installation) installed on your machine. 
 
 ## Instructions
 
@@ -18,31 +18,14 @@ Change your current directory to be inside the downloaded repository:
 ```
 cd stac-search-tutorial
 ```
-
-### Method 1: Pull Docker image from DockerHub (Recommended)
-
-It's recommended to pull the Docker image from DockerHub.
-
+Install the environment (Python 3.13 and all the required packages are defined in `pixi.toml`):
 ```
-docker pull hamedalemo/stac-search-tutorial:1.1
+pixi install
 ```
+Start Jupyter Lab:
 ```
-docker run -it -v $(pwd):/home/jupyteruser -p 8888:8888 hamedalemo/stac-search-tutorial:1.1
+pixi run lab
 ```
 
-- Copy the Jupyter Lab url and paste it in your browser. 
-- Open `earth_search_tutorial.ipynb` and follow the instructions. 
-
-### Method 2: Build your own Docker image (Not Recommended)
-
-- **Windows users:** It is highly recommended that you pull the Docker image, there seems to be an issue with conda-forge on WSL. 
-- Build the Docker image using the following command:
-```
-docker build -t stac-search-tutorial:1.1 .
-```
-- Run a container using the following command:
-```
-docker run -it -v $(pwd):/home/jupyteruser -p 8888:8888 stac-search-tutorial:1.1
-```
-- Copy the Jupyter Lab url and paste it in your browser. 
+- Jupyter Lab will open in your browser. If it doesn't, copy the Jupyter Lab url and paste it in your browser. 
 - Open `earth_search_tutorial.ipynb` and follow the instructions. 
